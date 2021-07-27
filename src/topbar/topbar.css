@@ -41,3 +41,19 @@
     padding: 0;
     list-style: none;
 }
+
+.topListItem{
+    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #0C090D;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.topSearchIcon{
+    font-size: 18px;
+    color: #C36C32;
+    cursor: pointer;
+    margin-left: 15px;
+}

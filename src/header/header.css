@@ -1,0 +1,38 @@
+.header{
+    margin-top: 60px;
+    
+}
+
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: #F4F4F9;
+    font-weight: 300;
+    border-bottom: 2px solid #F4F4F9; 
+    border-top: 2px solid #F4F4F9; 
+}
+
+.headerTitleSm{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: transparent;
+    
+}
+
+.headerTitleLg{
+    position: absolute;
+    top: 20%;
+    font-size: 10rem;
+    font-weight: 300;
+    background-color: transparent;
+}
+
+.videoWrapper{
+    width: 100%;
+    height: 550px;
+}
