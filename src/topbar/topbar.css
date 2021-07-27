@@ -1,0 +1,43 @@
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: #F4F4F9;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.topLeft,.topRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topCenter{
+    flex:6
+}
+
+.topIcon{
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #7F636E;
+    cursor: pointer;
+}
+
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topList{
+    display:flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
