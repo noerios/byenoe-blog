@@ -1,8 +1,11 @@
 .header{
     margin-top: 60px;
+    display: inherit;
 }
 
-
+.video{
+    display: flex;
+}
 .headerTitles{
     display: flex;
     flex-direction: column;
@@ -35,8 +38,9 @@
 .videoWrapper{
     width: 100%;
     height: 550px;
-    object-fit: cover;
-    z-index: 1;
+    z-index: 0;
+    display: flex;
+
 }
 
 .videoWrapper:before {
