@@ -7,24 +7,38 @@ function TopBar() {
     return (
         <div className="top">
             <div className="topLeft">
-                <i className="topIcon fab fa-linkedin"></i>
-                <i className="topIcon fab fa-github"></i>
-                <i className="topIcon fab fa-instagram"></i>
+            <Link target="_blank" to="https://www.linkedin.com/in/rnoerios/"><i className="topIcon fab fa-linkedin"></i></Link>
+            <Link target="_blank" to="https://github.com/noerios"><i className="topIcon fab fa-github"></i></Link>
+            <Link target="_blank" to="https://www.instagram.com/noway1010/"><i className="topIcon fab fa-instagram"></i></Link>
                 </div>
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem"><Link to="/" className="link">Home</Link></li>
-                    <li className="topListItem"><Link to="/" className="link">About</Link></li>
-                    <li className="topListItem">Portfolio</li>
-                    <li className="topListItem"><Link to="/" className="link">Contact</Link></li>
+                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com//about" className="link">About</Link></li>
+                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com/" className="link">Portfolio</Link></li>
+                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com/contact" className="link">Contact</Link></li>
                     <li className="topListItem">{user && "Logout"}</li>
                 </ul>
             </div>
             <div className="topRight">
-                <img 
-                className="topImg"
-                src={headShot} 
-                alt="" />
+                {
+                    user ? (
+                        <img 
+                        className="topImg"
+                        src={headShot} 
+                        alt="" />
+                    ) : (
+                        <ul className="topList">
+                            <li className="topListItem">
+                                <Link className="link" to="/login">Login</Link>
+                            </li>
+                            <li className="topListItem">
+                                <Link className="link" to="/register">Register</Link>
+                            </li>
+                        </ul>
+                    )
+                }
+                
                 <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
