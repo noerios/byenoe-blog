@@ -45,13 +45,15 @@
 .sidebarList{
     list-style: none;
     margin-bottom: 30px;
+    
 }
 
 .sidebarListItem{
     display: inline-block;
-    width: 33%;
+    width: 50%;
     margin-top: 15px;
     cursor: pointer;
+    
 }
 
 .sidebarSocial{

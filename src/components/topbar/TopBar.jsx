@@ -27,3 +27,5 @@ export const TopBar = () => {
         </div>
     )
 }
+
+export default TopBar;

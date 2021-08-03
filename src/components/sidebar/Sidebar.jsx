@@ -10,7 +10,7 @@ export const Sidebar = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut obcaecati ad minus, iure sed eveniet officiis odio ex dolore adipisci?</p>
             </div>
             <div className="sidebarItem">
-                <span className="sidebartitle">COUNTRIES</span>
+                <span className="sidebarTitle">COUNTRIES</span>
                 <ul className="sidebarList">
                     <li className="sidebarListItem">Malaysia</li>
                     <li className="sidebarListItem">Thailand</li>
@@ -24,7 +24,7 @@ export const Sidebar = () => {
                 </ul>
             </div>
             <div className="sidebarItem">
-                <span className="sidebartitle">SOCIAL</span>
+                <span className="sidebarTitle">SOCIAL</span>
                 <div className="sidebarSocial">
                     <i className="sidebarIcon fab fa-linkedin"></i>
                     <i className="sidebarIcon fab fa-github"></i>
