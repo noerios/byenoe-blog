@@ -1,11 +1,12 @@
 import "./sidebar.css";
+import headshotTwo from "../../images/headshot2.jpeg";
 
 export const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="sidebarItem">
                 <span className="sidebarTitle">About Me</span>
-                <img src="" alt="" />
+                <img src={headshotTwo} alt="" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut obcaecati ad minus, iure sed eveniet officiis odio ex dolore adipisci?</p>
             </div>
             <div className="sidebarItem">

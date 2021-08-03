@@ -1,5 +1,5 @@
 import "./topbar.css";
-import headShot from "../images/AboutPageHeadshot.jpg";
+import headShot from "../../images/AboutPageHeadshot.jpg";
 
 export const TopBar = () => {
     return (

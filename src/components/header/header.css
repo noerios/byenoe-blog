@@ -1,11 +1,7 @@
 .header{
     margin-top: 60px;
-    display: inherit;
 }
 
-.video{
-    display: flex;
-}
 .headerTitles{
     display: flex;
     flex-direction: column;
@@ -35,11 +31,19 @@
     background-color: transparent;
 }
 
+.headerImg{
+    width: 100%;
+    height: 500px;
+    margin-top: 45px;
+    object-fit: cover;
+}
+
+/*
 .videoWrapper{
     width: 100%;
     height: 550px;
     z-index: 0;
-    display: flex;
+    display: block;
 
 }
 
@@ -57,4 +61,6 @@
     linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
     z-index: 2;
 
-}
+}*/
+
+
