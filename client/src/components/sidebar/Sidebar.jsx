@@ -1,8 +1,20 @@
 import "./sidebar.css";
 import headshotTwo from "../../images/headshot2.jpeg";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export const Sidebar = () => {
+    const [cats, setCats] = useState([]);
+
+    useEffect(()=>{
+        const getCats = async ()=>
+        {
+            const res = await axios.get("/categories")
+            setCats(res.data)
+        }
+        getCats();
+    },[])
     return (
         <div className="sidebar">
             <div className="sidebarItem">
@@ -13,15 +25,14 @@ export const Sidebar = () => {
             <div className="sidebarItem">
                 <span className="sidebarTitle">COUNTRIES</span>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem"><Link to="/" className="link">Malaysia</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Thailand</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Cambodia</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Croatia</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Czech Rep</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Portugal</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Mexico</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Colombia</Link></li>
-                    <li className="sidebarListItem"><Link to="/" className="link">Peru</Link></li>
+                    {cats.map((c)=>(
+
+                        <Link className="link" to={`/?cat=${c.name}`}>
+                            <li classNa me="sidebarListItem">{c.name}</li>
+                        </Link>
+                        
+                    ))}
+                    
                 </ul>
             </div>
             <div className="sidebarItem">

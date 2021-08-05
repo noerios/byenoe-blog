@@ -1,23 +1,27 @@
 import React from 'react';
 import "./post.css";
+import {Link} from "react-router-dom";
 import testImage from "../../images/kl.jpg"
 
-export default function Post () {
+export default function Post({post}) {
     return (
         <div className="post">
-            <img className="postImg" src={testImage} alt="" />
+        {post.photo && (
+            <img className="postImg" src={post.photo} alt="" />
+        )}
             <div className="postInfo">
-                <div className="postCats">
-                    <span className="postCat">Malaysia</span>
+                <div className="postCats">{
+                    post.categories.map((c) => (
+                        <span className="postCat">{c.name}</span>
+                    ))}
                 </div>
-                <span className="postTitle">Remote Year</span>
+                <Link className="link" to={`/post/${post._id}`}>
+                <span className="postTitle">{post.title}</span>
+                </Link>
                 <hr />
-                <span className="postDate">09/07/2016</span>
+                <span className="postDate">{new Date(post.createdAt).toDateString}</span>
             </div>
-            <p className="postDesc">
-            Well, it’s been a crazy couple of weeks. In the past 14 days I’ve traveled a total of 11,396 miles; 21 hours of driving and 21 hours in flight. I’ve either sold or moved all my belongings across two time zones, and I’ve spent 14 hours in Hong Kong on a layover to remember.
-            I’ve also begun my Remote Year in Kuala Lumpur.
-            </p>
+            <p className="postDesc">{post.desc}</p>
         </div>
     );
 }
