@@ -1,7 +1,7 @@
 import React from 'react';
 import "./post.css";
 import {Link} from "react-router-dom";
-import testImage from "../../images/kl.jpg"
+
 
 export default function Post({post}) {
     return (
