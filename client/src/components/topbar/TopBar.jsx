@@ -1,9 +1,17 @@
-import "./topbar.css";
+import { useContext } from "react";
 import headShot from "../../images/AboutPageHeadshot.jpg";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
+import "./topbar.css";
+
+
 
 function TopBar() {
-    const user = false;
+    const { user, dispatch } = useContext(Context);
+
+    const handleLogout = () =>{
+        dispatch({ type: "LOGOUT" });
+    };
     return (
         <div className="top">
             <div className="topLeft">
@@ -16,8 +24,8 @@ function TopBar() {
                     <li className="topListItem"><Link to="/" className="link">Home</Link></li>
                     <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com//about" className="link">About</Link></li>
                     <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com/" className="link">Portfolio</Link></li>
-                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com/contact" className="link">Contact</Link></li>
-                    <li className="topListItem">{user && "Logout"}</li>
+                    <li className="topListItem"><Link to="/write" className="link">Write</Link></li>
+                    <li className="topListItem" onClick={handleLogout}>{user && "Logout"}</li>
                 </ul>
             </div>
             <div className="topRight">
@@ -25,7 +33,7 @@ function TopBar() {
                     user ? (
                         <img 
                         className="topImg"
-                        src={headShot} 
+                        src={user.profilePic} 
                         alt="" />
                     ) : (
                         <ul className="topList">
