@@ -8,13 +8,13 @@ export const Sidebar = () => {
     const [cats, setCats] = useState([]);
 
     useEffect(()=>{
-        const getCats = async ()=>
-        {
+        const getCats = async ()=> {
             const res = await axios.get("/categories")
-            setCats(res.data)
+            setCats(res.data);
         }
         getCats();
-    },[])
+    },[]);
+
     return (
         <div className="sidebar">
             <div className="sidebarItem">
@@ -25,12 +25,10 @@ export const Sidebar = () => {
             <div className="sidebarItem">
                 <span className="sidebarTitle">COUNTRIES</span>
                 <ul className="sidebarList">
-                    {cats.map((c)=>(
-
-                        <Link className="link" to={`/?cat=${c.name}`}>
-                            <li classNa me="sidebarListItem">{c.name}</li>
+                    {cats.map((c) => (
+                        <Link to={`/?cat=${c.name}`} className="link">
+                            <li className="sidebarListItem">{c.name}</li>
                         </Link>
-                        
                     ))}
                     
                 </ul>

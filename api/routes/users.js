@@ -8,7 +8,7 @@ const Post = require("../models/Post");
 router.put("/:id", async (req,res)=>{
     if(req.body.userID === req.params.id){
         if(req.body.password){
-            const salt = await bcrypt.compare.genSalt(10);
+            const salt = await bcrypt.genSalt(10);
             req.body.password = await bcrypt.hash(req.body.password, salt);
         }
     
