@@ -23,6 +23,25 @@
     
 }
 
+@media screen and (max-width:  1050px){
+    .headerTitleSm{
+        top: 33%;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width:  415px){
+    .headerTitleSm{
+        top: 45%;
+    }
+}
+
+@media screen and (max-width:  375px){
+    .headerTitleSm{
+        top: 43%;
+    }
+}
+
 .headerTitleLg{
     position: absolute;
     top: 33%;
@@ -31,9 +50,22 @@
     background-color: transparent;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
     .headerTitleLg{
         font-size: 8rem;
+        top: 18%;
+    }
+}
+@media screen and (max-width:  415px) {
+    .headerTitleLg{
+        font-size: 5rem;
+        top: 33%;
+    }
+}
+@media screen and (max-width:  375px) {
+    .headerTitleLg{
+        font-size: 4rem;
+        top: 33%;
     }
 }
 
