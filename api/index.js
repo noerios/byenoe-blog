@@ -13,8 +13,7 @@ const path = require("path");
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
-//added for heroku deploy
-app.use(express.static(path.join(__dirname, "client", "build")));
+
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true, 
@@ -43,10 +42,6 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-//added for heroku deploy
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 app.listen("5000", ()=>{
     console.log("backend is running, bish!")
