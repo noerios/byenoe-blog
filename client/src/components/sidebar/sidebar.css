@@ -13,6 +13,12 @@
     border-right: 2px solid #0C090D;
 }
 
+@media screen and (max-width: 1000px){
+    .sidebar{
+        display: none;
+    }
+}
+
 .sidebarItem{
     display: flex;
     flex-direction: column;
@@ -45,7 +51,9 @@
 .sidebarList{
     list-style: none;
     margin-bottom: 30px;
-    
+    color: #C36C32;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .85rem;
 }
 
 .sidebarListItem{
@@ -68,4 +76,9 @@
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .85rem;
 }

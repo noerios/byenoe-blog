@@ -20,7 +20,9 @@ export const Sidebar = () => {
             <div className="sidebarItem">
                 <span className="sidebarTitle">About Me</span>
                 <img src={headshotTwo} alt="" />
-                <p>I wrote this blog in 2016 when I circled the globe with Remote Year while working as a copywriter at Ayzenberg Group in Los Angeles.</p>
+                <p>I wrote this blog in 2016 when I circled the globe with Remote Year while working as a copywriter at Ayzenberg Group in Los Angeles. Now, I use the content to 
+                    show my full-stack web development capabilities. This blog was built with REACT, MongoDB, Express, and Node.
+                </p>
             </div>
             <div className="sidebarItem">
                 <span className="sidebarTitle">COUNTRIES</span>
