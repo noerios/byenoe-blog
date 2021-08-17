@@ -9,10 +9,13 @@ const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
 
+const port = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 mongoose.connect(process.env.MONGO_URL, {
@@ -42,7 +45,11 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
+//adding for deploy
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
-app.listen("5000", ()=>{
+app.listen(port, ()=>{
     console.log("backend is running, bish!")
 })
