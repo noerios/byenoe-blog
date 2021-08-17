@@ -47,7 +47,7 @@ app.use("/api/categories", categoryRoute);
 
 //adding for deploy
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build"));
 });
 
 app.listen(port, ()=>{
