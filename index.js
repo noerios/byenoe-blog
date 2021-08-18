@@ -11,12 +11,12 @@ const path = require("path");
 
 const port = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, "client", "build")));
 
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 // ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 
