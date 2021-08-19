@@ -39,9 +39,9 @@ export const Sidebar = () => {
             <div className="sidebarItem">
                 <span className="sidebarTitle">SOCIAL</span>
                 <div className="sidebarSocial">
-                <Link className="link" target="_blank" to="https://www.linkedin.com/in/rnoerios/"><i className="sidebarIcon fab fa-linkedin"></i></Link>
-                <Link className="link" target="_blank" to="https://github.com/noerios"><i className="sidebarIcon fab fa-github"></i></Link>
-                <Link className="link" target="_blank" to="https://www.instagram.com/noway1010/"><i className="sidebarIcon fab fa-instagram"></i></Link>
+                <Link className="link" to={{ pathname: "https://www.linkedin.com/in/rnoerios/"}} target="_blank"><i className="sidebarIcon fab fa-linkedin"></i></Link>
+                <Link className="link" to={{ pathname: "https://github.com/noerios"}} target="_blank"><i className="sidebarIcon fab fa-github"></i></Link>
+                <Link className="link" to={{ pathname: "https://www.instagram.com/noway1010/"}} target="_blank"><i className="sidebarIcon fab fa-instagram"></i></Link>
                 </div>
             </div>
         </div>
