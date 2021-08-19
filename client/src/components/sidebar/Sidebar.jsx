@@ -2,14 +2,15 @@ import "./sidebar.css";
 import headshotTwo from "../../images/headshot2.jpeg";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { axiosInstance } from "../../config";
+
 
 export const Sidebar = () => {
     const [cats, setCats] = useState([]);
 
     useEffect(()=>{
         const getCats = async ()=> {
-            const res = await axios.get("/categories")
+            const res = await axiosInstance.get("/categories")
             setCats(res.data);
         }
         getCats();
