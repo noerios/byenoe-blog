@@ -22,7 +22,7 @@ function TopBar() {
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem"><Link to="/" className="link">Home</Link></li>
-                    <li className="topListItem"><Link to={{ pathname: "https://radiant-depths-84649.herokuapp.com//about"}} target="_blank" className="link">About</Link></li>
+                    <li className="topListItem"><Link to={{ pathname: "https://radiant-depths-84649.herokuapp.com/about"}} target="_blank" className="link">About</Link></li>
                     <li className="topListItem"><Link to={{ pathname: "https://radiant-depths-84649.herokuapp.com/"}} target="_blank" className="link">Portfolio</Link></li>
                     <li className="topListItem"><Link to="/write" className="link">Write</Link></li>
                     <li className="topListItem" onClick={handleLogout}>{user && "Logout"}</li>
