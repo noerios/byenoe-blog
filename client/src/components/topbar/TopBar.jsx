@@ -15,15 +15,15 @@ function TopBar() {
     return (
         <div className="top">
             <div className="topLeft">
-            <a target="_blank" to="https://www.linkedin.com/in/rnoerios/"><i className="topIcon fab fa-linkedin"></i></a>
-            <a target="_blank" to="https://github.com/noerios"><i className="topIcon fab fa-github"></i></a>
-            <a target="_blank" to="https://www.instagram.com/noway1010/"><i className="topIcon fab fa-instagram"></i></a>
+            <Link to={{ pathname: "https://www.linkedin.com/in/rnoerios/"}} target="_blank"><i className="topIcon fab fa-linkedin"></i></Link>
+            <Link to={{ pathname: "https://github.com/noerios"}} target="_blank"><i className="topIcon fab fa-github"></i></Link>
+            <Link to="https://www.instagram.com/noway1010/" target="_blank"><i className="topIcon fab fa-instagram"></i></Link>
                 </div>
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem"><Link to="/" className="link">Home</Link></li>
-                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com//about" className="link">About</Link></li>
-                    <li className="topListItem"><Link target="_blank" to="https://radiant-depths-84649.herokuapp.com/" className="link">Portfolio</Link></li>
+                    <li className="topListItem"><Link to="https://radiant-depths-84649.herokuapp.com//about" target="_blank" className="link">About</Link></li>
+                    <li className="topListItem"><Link to="https://radiant-depths-84649.herokuapp.com/" target="_blank" className="link">Portfolio</Link></li>
                     <li className="topListItem"><Link to="/write" className="link">Write</Link></li>
                     <li className="topListItem" onClick={handleLogout}>{user && "Logout"}</li>
                 </ul>
